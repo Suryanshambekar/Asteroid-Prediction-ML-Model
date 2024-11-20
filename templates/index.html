@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Hazard Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Asteroid Hazard Prediction</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="Absolute Magnitude">Absolute Magnitude:</label>
+                <input type="text" id="Absolute Magnitude" name="Absolute Magnitude" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Est Dia in KM(min)">Estimated Diameter (KM - min):</label>
+                <input type="text" id="Est Dia in KM(min)" name="Est Dia in KM(min)" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Relative Velocity km per sec">Relative Velocity (KM/s):</label>
+                <input type="text" id="Relative Velocity km per sec" name="Relative Velocity km per sec" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Miss Dist.(Astronomical)">Miss Distance (Astronomical):</label>
+                <input type="text" id="Miss Dist.(Astronomical)" name="Miss Dist.(Astronomical)" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Orbit Uncertainity">Orbit Uncertainty:</label>
+                <input type="text" id="Orbit Uncertainity" name="Orbit Uncertainity" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Minimum Orbit Intersection">Minimum Orbit Intersection:</label>
+                <input type="text" id="Minimum Orbit Intersection" name="Minimum Orbit Intersection" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Jupiter Tisserand Invariant">Jupiter Tisserand Invariant:</label>
+                <input type="text" id="Jupiter Tisserand Invariant" name="Jupiter Tisserand Invariant" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Epoch Osculation">Epoch Osculation:</label>
+                <input type="text" id="Epoch Osculation" name="Epoch Osculation" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Eccentricity">Eccentricity:</label>
+                <input type="text" id="Eccentricity" name="Eccentricity" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Semi Major Axis">Semi Major Axis:</label>
+                <input type="text" id="Semi Major Axis" name="Semi Major Axis" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Inclination">Inclination:</label>
+                <input type="text" id="Inclination" name="Inclination" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Asc Node Longitude">Asc Node Longitude:</label>
+                <input type="text" id="Asc Node Longitude" name="Asc Node Longitude" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Orbital Period">Orbital Period:</label>
+                <input type="text" id="Orbital Period" name="Orbital Period" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Perihelion Distance">Perihelion Distance:</label>
+                <input type="text" id="Perihelion Distance" name="Perihelion Distance" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Perihelion Arg">Perihelion Argument:</label>
+                <input type="text" id="Perihelion Arg" name="Perihelion Arg" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Aphelion Dist">Aphelion Distance:</label>
+                <input type="text" id="Aphelion Dist" name="Aphelion Dist" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Perihelion Time">Perihelion Time:</label>
+                <input type="text" id="Perihelion Time" name="Perihelion Time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Mean Anomaly">Mean Anomaly:</label>
+                <input type="text" id="Mean Anomaly" name="Mean Anomaly" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Mean Motion">Mean Motion:</label>
+                <input type="text" id="Mean Motion" name="Mean Motion" required>
+            </div>
+            
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
