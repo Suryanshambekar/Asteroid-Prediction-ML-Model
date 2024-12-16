@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score
 @st.cache
 def load_data():
     # Load and preprocess the dataset
-    df = pd.read_csv("/nasa.csv")  # Ensure 'nasa.csv' is in the working directory
+    df = pd.read_csv("nasa.csv")  # Ensure 'nasa.csv' is in the working directory
     df = df.drop(['Neo Reference ID', 'Name', 'Orbit ID', 'Close Approach Date',
                   'Epoch Date Close Approach', 'Orbit Determination Date',
                   'Orbiting Body', 'Equinox'], axis=1)  # Drop irrelevant columns
